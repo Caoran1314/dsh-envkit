@@ -1,0 +1,58 @@
+{
+  "name": "dsh-envkit",
+  "version": "0.1.1",
+  "description": "DeepSeek Harness 环境工具插件：env_probe 一次性探明网络/代理/可写性/子进程管道，safe_json_edit 无 BOM 安全改写 JSON（修 profile 的头号杀手），git_repair 检测并重建丢失的 .git 元数据。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "diagnostics",
+    "environment",
+    "json",
+    "bom",
+    "git-repair",
+    "troubleshooting"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./core": "./lib/core.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "contract": "node test/contract.mjs",
+    "test": "node test/contract.mjs && node test/smoke.mjs",
+    "prepublishOnly": "npm run test && npm pack --dry-run"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caoran1314/dsh-envkit.git"
+  },
+  "homepage": "https://github.com/Caoran1314/dsh-envkit#readme",
+  "bugs": {
+    "url": "https://github.com/Caoran1314/dsh-envkit/issues"
+  }
+}

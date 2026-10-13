@@ -1,0 +1,11 @@
+# dsh-envkit — DSH bundle patch
+#
+# 挂载宿主半侧。浏览器半侧由 package.json 的 dsh.client 声明，宿主按它自动组装。
+#
+# 安装：
+#   dsh plugin --profile desktop add dsh-envkit
+# 本地开发：
+#   dsh plugin --profile desktop add link:D:\软件\dsh-envkit
+- insert:
+    - id: dsh-envkit
+      name: dsh-envkit

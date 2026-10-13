@@ -1,0 +1,5 @@
+node_modules/
+*.tgz
+.npmrc
+*.envkit-backup-*
+*.envkit-tmp-*
