@@ -5,7 +5,7 @@
 # 安装：
 #   dsh plugin --profile desktop add dsh-envkit
 # 本地开发：
-#   dsh plugin --profile desktop add link:D:\软件\dsh-envkit
+#   dsh plugin --profile desktop add link:<你的目录>\dsh-envkit
 - insert:
     - id: dsh-envkit
       name: dsh-envkit
